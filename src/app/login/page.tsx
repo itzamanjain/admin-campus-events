@@ -14,9 +14,6 @@ import { Label } from "@/components/ui/label"
 const page = () => {
   return (
     <div>
-      
-  function LoginCard() {
-    return (
       <Card className="w-[310px]">
         <CardHeader>
           <CardTitle>Login</CardTitle>
@@ -47,8 +44,6 @@ const page = () => {
           <Button>Login</Button>
         </CardFooter>
       </Card>
-    )
-  }
     </div>
   )
 }
