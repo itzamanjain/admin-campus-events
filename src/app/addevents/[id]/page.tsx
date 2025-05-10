@@ -42,7 +42,7 @@ const AddEventForm = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8000/event/addevents/${id}`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/event/addevents/${id}`,
         formData,
         {
           headers: {

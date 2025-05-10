@@ -28,7 +28,7 @@ const Page = () => {
     setloading(true); // set loading to true
   
     try {
-      const response = await axios.post('http://localhost:8000/user/login', {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/user/login`, {
         email,
         password
       }, {

@@ -29,7 +29,7 @@ const Page = () => {
     formdata.append("enddate", enddate);
 
     const response = await axios.put(
-      `http://localhost:8000/event/editevent/${id}`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/event/editevent/${id}`,
       formdata,
       {
         headers: {

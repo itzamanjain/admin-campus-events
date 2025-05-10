@@ -13,7 +13,7 @@ const Page = () => {
   const fetchEvents = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:8000/event/getevents");
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/event/getevents`);
       setEvents(response.data.data);
       setLoading(false);
     } catch (error) {

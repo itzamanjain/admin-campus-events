@@ -55,7 +55,7 @@ const Page: React.FC = () => {
     if (avatar) formData.append('avatar', avatar)
 
     try {
-      const response = await axios.post('http://localhost:8000/user/admin', formData, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/user/admin`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
 

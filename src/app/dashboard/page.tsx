@@ -29,7 +29,7 @@ const Page = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:8000/club/getclub', {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/club/getclub`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

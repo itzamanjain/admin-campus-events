@@ -41,7 +41,7 @@ const Page = () => {
         console.error('No access token found in local storage');
         return;
       }
-      const response = await axios.post('http://localhost:8000/club/addclub', formData, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/club/addclub`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
